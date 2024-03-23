@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PizzaApp</string>
+    <string name="menu">меню</string>
+    <string name="user">профиль</string>
+    <string name="cart">корзина</string>
+    <string name="pizza">пицца</string>
+    <string name="combo">комбо</string>
+    <string name="dessert">десерты</string>
+    <string name="drink">напитки</string>
+    <string name="from">от</string>
+    <string name="dollar">$</string>
+    <string name="not_yet">Функционал недоступен</string>
+</resources>

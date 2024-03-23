@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    tools:context=".app.view.DashboardFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_100"
+        android:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                tools:ignore="UselessLeaf">
+
+                <LinearLayout
+                    android:id="@+id/bannerPanel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/ChipTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            app:tabContentStart="@dimen/cardview_default_elevation"
+            app:tabGravity="center"
+            app:tabMode="scrollable">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="88dp"
+                android:layout_height="32dp"
+                android:text="@string/pizza" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="88dp"
+                android:layout_height="32dp"
+                android:text="@string/combo" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="88dp"
+                android:layout_height="32dp"
+                android:text="@string/dessert" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="88dp"
+                android:layout_height="32dp"
+                android:text="@string/drink" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dish_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/dish_item" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:padding="150dp"
+        android:indeterminateTint="@color/pink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="#F0F0F0"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

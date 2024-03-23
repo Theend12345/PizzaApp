@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="151dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dish_img"
+        android:src="@color/gray"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="16dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dish_name"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:text="Ветчина и грибы"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"/>
+
+        <TextView
+            android:id="@+id/dish_description"
+            android:text="Ветчина и грибы"
+            android:textColor="@color/gray"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"/>
+
+        <TextView
+            android:id="@+id/dish_price"
+            android:text="от 744 р"
+            android:textSize="13sp"
+            android:textColor="@color/pink"
+            android:background="@drawable/price_background"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_width="87dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="32dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
